@@ -1,0 +1,100 @@
+.Task3 {
+	width: 600px;
+	padding: 30px;
+	margin: 50px auto;
+	border: 1px solid #ccc;	
+	&__input,
+	&__select {
+		width: 400px;
+		padding: 8px 14px;
+		margin-bottom: 25px;
+		border: 1px solid #000;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+	&__select {
+		option:first-of-type {
+			display: none;
+		}
+	}
+	&__slider {
+		position: relative;
+		width: 100%;
+		.rangeCounterWrap {
+			position: absolute;
+			top: 10px;
+			height: 30px;
+			width: 575px;
+			left: 11.5px;
+			z-index: -1;
+		}
+		.rangeCounter {
+			position: absolute;			
+			display: block;
+			width: 30px;
+			height: 30px;
+			margin-left: -14px;			
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			&:before {
+				display: block;
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				border-radius: 50% 50% 50% 0;
+				background: #48f;
+				box-shadow: inset 0 0 0 1px #fff, 1px 1px 4px 0 #444;
+				transform: rotate(-45deg);
+				z-index: -1;
+			}
+		}
+		input{
+			width: 100%;
+			height: 1px;
+			margin: 50px 0;
+			-webkit-appearance: none;
+			border-radius: 5px;
+			background: #000;
+			outline: none;
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				background: #48f;
+				box-shadow: inset 0 0 0 1px #fff, 1px 1px 4px 0 #444;
+				cursor: pointer;
+			}
+
+			&::-moz-range-thumb {
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				background: #48f;
+				box-shadow: inset 0 0 0 1px #fff, 1px 1px 4px 0 #444;
+				cursor: pointer;
+			}
+		}		
+	}
+	.InputCheckbox,
+	.InputRadio  {
+		display: block;
+		cursor: pointer;
+		max-width: 30%;
+	}
+	&__button {
+		display: block;
+		text-align: right;
+		padding: 10px 35px;
+		margin-top: 40px;
+		margin-left: auto;
+		background-color: #fff;
+		border: 1px solid #888;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+}
+
