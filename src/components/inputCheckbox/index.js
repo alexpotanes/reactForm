@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import './style.less';
 
 class InputCheckbox extends Component {
 
@@ -13,7 +14,7 @@ class InputCheckbox extends Component {
   static defaultProps = {
     value: true,
     valueNot: false,
-    onChange: ()=>{}  
+    onChange: ()=>{}
   };
 
   onChange = () => {
@@ -27,7 +28,7 @@ class InputCheckbox extends Component {
         <input 
           type="checkbox" 
           name={this.props.name} 
-          value={this.props.children} 
+          value={this.props.children}
           checked={this.props.checked}
           onChange={this.onChange}
         />

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import './style.less';
 
 class InputSelect extends Component {
 
@@ -17,7 +18,7 @@ class InputSelect extends Component {
 
   render() {
     return (
-      <select className={this.props.className} onChange={this.onChange}>
+      <select className="InputSelect" onChange={this.onChange}>
         <option>{this.props.placeholderSelect}</option>
         {
           this.props.optionValue.map (function (item, i) {

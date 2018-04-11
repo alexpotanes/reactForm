@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import './style.less';
 
 class InputRange extends Component {
 
@@ -17,9 +18,9 @@ class InputRange extends Component {
 
   render() {
     return (
-      <div className={this.props.className}>
+      <div className="InputRange">
         <input type="range" min={this.props.min} max={this.props.max} step={this.props.step} onChange={this.onChange} value={this.props.value} />
-        <div className="rangeCounterWrap"><span className="rangeCounter" style={{left: this.props.value + "%"}}>{this.props.value}</span></div>        
+        <div className="rangeCounterWrap"><span className="rangeCounter" style={{left: this.props.value + "%"}}>{this.props.value}</span></div>
       </div>
     );
   }

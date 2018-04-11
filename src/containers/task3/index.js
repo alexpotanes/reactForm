@@ -20,7 +20,7 @@ class Task3 extends Component {
       town: '',
       checked: true,
       minValue: 0,
-      maxValue: 100,
+      maxValue: 99,
       step: 1,
       rangeValue: 48,
       selectedOption: 'option1',
@@ -45,42 +45,40 @@ class Task3 extends Component {
   render() {
     return (
       <div className="Task3">
-      <form ref="form"> 
-        <InputText 
-          className="Task3__input" 
-          value={this.state.login} 
-          onChange={this.onChangeField('login')} 
-          type="text" placeholder="Логин" 
-         /> 
-        <InputText 
-          className="Task3__input" 
-          value={this.state.password} 
-          onChange={this.onChangeField('password')} 
-          type="password" placeholder="Пароль" 
-         />
-        <InputText 
-          className="Task3__input" 
-          value={this.state.email} 
-          onChange={this.onChangeField('email')} 
-          type="email" placeholder="Email" 
-         />
-
-        <InputSelect className="Task3__select" 
-        value={this.state.town} 
-        onChange={this.onChangeField('town')} 
-        placeholderSelect="Выберите город"
-        optionValue={this.state.optionValue}>
-        </InputSelect> <br/>
-
-        <InputRange className="Task3__slider" 
-          value={this.state.rangeValue} 
-          onChange={this.onChangeField('rangeValue')} 
-          min={this.state.minValue} 
-          max={this.state.maxValue} 
-          step={this.state.step} /><br/>
-
-        <InputCheckbox onChange={this.onChangeField('checked')} checked={this.state.checked} >на все согласный</InputCheckbox><br/>
-
+        <form ref="form"> 
+          <InputText 
+            value={this.state.login} 
+            onChange={this.onChangeField('login')} 
+            type="text" placeholder="Логин" 
+          /> 
+          <InputText 
+            value={this.state.password} 
+            onChange={this.onChangeField('password')} 
+            type="password" placeholder="Пароль" 
+          />
+          <InputText 
+            value={this.state.email} 
+            onChange={this.onChangeField('email')} 
+            type="email" placeholder="Email" 
+          />
+          <InputSelect 
+            value={this.state.town} 
+            onChange={this.onChangeField('town')} 
+            placeholderSelect="Выберите город"
+            optionValue={this.state.optionValue}>
+          </InputSelect><br />
+          <InputRange 
+            value={this.state.rangeValue} 
+            onChange={this.onChangeField('rangeValue')} 
+            min={this.state.minValue} 
+            max={this.state.maxValue} 
+            step={this.state.step} 
+          /><br />
+          <InputCheckbox 
+            onChange={this.onChangeField('checked')} 
+            checked={this.state.checked}>
+            на все согласный
+          </InputCheckbox><br />
           <InputRadio
             name="choice"
             value="option1"
@@ -88,17 +86,15 @@ class Task3 extends Component {
             checked={this.state.selectedOption === 'option1'}>
             Да
           </InputRadio>
-
           <InputRadio
             name="choice"
             value="option2"
             onChange={this.onChangeField('selectedOption')}
             checked={this.state.selectedOption === 'option2'}>
             Нет
-          </InputRadio><br/>
-
-        <ButtonSubmit className="Task3__button">Поехали!</ButtonSubmit>
-      </form>
+          </InputRadio><br />
+          <ButtonSubmit>Поехали!</ButtonSubmit>
+        </form>
       </div>
     );
   }

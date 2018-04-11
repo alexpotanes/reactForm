@@ -1,0 +1,61 @@
+.InputRange {
+	position: relative;
+	width: 100%;
+	.rangeCounterWrap {
+		position: absolute;
+		top: 10px;
+		height: 30px;
+		width: 581px;
+		left: 11.5px;
+		z-index: -1;
+	}
+	.rangeCounter {
+		position: absolute;			
+		display: block;
+		width: 30px;
+		height: 30px;
+		margin-left: -14px;			
+		color: #fff;
+		text-align: center;
+		line-height: 30px;
+		&:before {
+			display: block;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50% 50% 50% 0;
+			background: #48f;
+			box-shadow: inset 0 0 0 1px #fff, 1px 1px 4px 0 #444;
+			transform: rotate(-45deg);
+			z-index: -1;
+		}
+	}
+	input{
+		width: 100%;
+		height: 1px;
+		margin: 50px 0;
+		-webkit-appearance: none;
+		border-radius: 5px;
+		background: #000;
+		outline: none;
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #48f;
+			box-shadow: inset 0 0 0 1px #fff, 1px 1px 4px 0 #444;
+			cursor: pointer;
+		}
+		&::-moz-range-thumb {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #48f;
+			box-shadow: inset 0 0 0 1px #fff, 1px 1px 4px 0 #444;
+			cursor: pointer;
+		}
+	}		
+}
